@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Counter</title>
+	<style>
+		h1 {
+			display: none;
+		}
+
+		[data-pzpl-cloak] {
+			display: block;
+		}
+	</style>
+</head>
+
+<body>
+	<div data-pzpl-data="{}">
+		<h1 data-pzpl-cloak>Loading...</h1>
+	</div>
+
+	<main data-pzpl-data="{ count: 1 }" data-pzpl-init="this.count = 0;">
+		<p data-pzpl-text="count"></p>
+		<p data-pzpl-show="this.count > 10">Count is dangerously high!</p>
+		<p data-pzpl-show="this.count < -10">Count is dangerously low!</p>
+		<button data-pzpl-click="count++" data-pzpl-bind="disabled,this.count > 10">Count Up</button>
+		<button data-pzpl-click="count--" data-pzpl-bind="disabled,this.count < -10">Count Down</button>
+
+		<label for="count">Emergency updating: </label><input type="text" name="count" title="count"
+			data-pzpl-keyup="count++" data-pzpl-bind="disabled,this.count < 10 && this.count > -10">
+	</main>
+	<br>
+	<div data-pzpl-data="{name:''}">
+		<label for="name">Name:</label>
+		<input id="name" type="text" data-pzpl-model="name">
+		<p data-pzpl-text="'Hello, ' + this.name"></p>
+	</div>
+	<br>
+	<div data-pzpl-data="{ show: false }">
+		<button data-pzpl-click="this.show = !this.show" data-pzpl-class="this.show ? 'active' : 'hidden'">
+			Toggle Button
+		</button>
+	</div>
+	<br>
+	<div data-pzpl-data="{ show: false }">
+		<button data-pzpl-click="this.show = !this.show" data-pzpl-class="this.show ? 'active' : 'hidden'">
+			Toggle Button
+		</button>
+		<p data-pzpl-show="this.show">Hello!</p>
+	</div>
+	<br>
+	<hr><br>
+	<div data-pzpl-data="{ showModal: false, name: '', email: '', success: false }">
+		<main>
+			<h1>New widget launching soon.</h1>
+			<p>Not long to go until Acme Inc launch their latest product.</p>
+			<p data-pzpl-show="this.success">Thanks <span data-pzpl-text="name"></span>
+				we will be in touch.
+			</p>
+			<p data-pzpl-show="!this.success">
+				<button data-pzpl-click="this.showModal = true">Get in
+					touch</button>
+			</p>
+		</main>
+
+		<footer>
+			<p>Demo of AlpineJS for Smashing Magazine.</p>
+		</footer>
+
+		<div data-pzpl-class="this.showModal ? 'show d-block' : 'hide'" data-pzpl-show="this.showModal" role="dialog">
+			<h5>Get in touch</h5>
+			<button type="button" aria-label="Close" data-pzpl-click="this.showModal = false">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			<form>
+				<label for="name">Your name</label>
+				<input type="text" name="name" data-pzpl-model="name" title="name">
+
+				<label for="email">Your email</label>
+				<input type="email" name="email" data-pzpl-model="email" title="email">
+
+				<button type="button" data-pzpl-bind="disabled,!this.name || !this.email">Submit</button>
+			</form>
+		</div>
+	</div>
+	<script src="./script.js" defer></script>
+</body>
+
+</html>

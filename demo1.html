@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>This is a scam&trade;</title>
+	<style>
+		body {
+			font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		}
+
+		[data-loader] {
+			font-size: 10rem;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-right: -50%;
+			margin: 0;
+			display: none;
+			animation: load 3s linear infinite forwards;
+		}
+
+		@keyframes load {
+			0% {
+				transform: translate(-50%, -50%) scale(1);
+			}
+
+			50% {
+				transform: translate(-50%, -50%) scale(2);
+			}
+
+			100% {
+				transform: translate(-50%, -50%) scale(1);
+			}
+		}
+
+		[data-pzpl-cloak] {
+			display: block;
+		}
+
+		[data-pzpl-init] {
+			display: none;
+		}
+
+		h3 {
+			margin: 0.5rem;
+		}
+	</style>
+</head>
+
+<body>
+	<div data-pzpl-data="{}">
+		<span data-loader data-pzpl-cloak>Loading...</span>
+	</div>
+
+	<main
+		data-pzpl-data="{ price: 1, com: false, xyz: false, cc:false, root: false, cloudfront: false, bank: 12269, times: 1, ssd: false, wordpress: false, composer: false, disk: false, logs: false}"
+		data-pzpl-init>
+		<h1>This is a scam&trade;</h1>
+		<h2>Your plan is PHP Web Hosting Maxima.</h2>
+		<p>Your price is: <span data-pzpl-text="price"></span>.49$</p>
+		<input type="checkbox" title="domain"
+			data-pzpl-change="this.com ? this.price -= 6 : this.price += 6; this.com = !this.com;">
+		<label>.com Domain</label><br>
+		<input type="checkbox" title="domain"
+			data-pzpl-change="this.xyz ? this.price -= 4 : this.price += 4; this.xyz = !this.xyz;">
+		<label>.xyz Domain</label><br>
+		<input type="checkbox" title="domain"
+			data-pzpl-change="this.cc ? this.price -= 5 : this.price += 5; this.cc = !this.cc;">
+		<label>.cc Domain</label><br>
+		<input type="checkbox" title="root"
+			data-pzpl-change="this.root ? this.price -= 3 : this.price += 3; this.root = !this.root;">
+		<label>Root access</label><br>
+		<input type="checkbox" title="cloudfront"
+			data-pzpl-change="this.cloudfront ? this.price -= 7 : this.price += 7; this.cloudfront = !this.cloudfront;">
+		<label>Global CDN</label><br>
+		<input type="checkbox" title="ssd"
+			data-pzpl-change="this.ssd ? this.price -= 5 : this.price += 5; this.ssd = !this.ssd;">
+		<label>SSD Disk</label><Cacheitle="wordpress"
+			data-pzpl-change="this.wordpress ? this.price -= 3 : this.price += 3; this.wordpress = !this.wordpress;">
+		<label>Allow Wordpress installation</label><br>
+		<input type="checkbox" title="composer"
+			data-pzpl-change="this.composer ? this.price -= 2 : this.price += 2; this.composer = !this.composer;">
+		<label>Composer</label><br>
+		<input type="checkbox" title="disk"
+			data-pzpl-change="this.disk ? this.price -= 9 : this.price += 9; this.disk = !this.disk;">
+		<label>20 GB disk (10 GB by default)</label><br>
+		<input type="checkbox" title="logs"
+			data-pzpl-change="this.logs ? this.price -= 4 : this.price += 4; this.logs = !this.logs;">
+		<label>Server Logs</label><br>
+		<br>
+		<button data-pzpl-click="this.bank -= this.price; this.times++; this.price *= this.times;">Buy now</button>
+		<p>Your plan is for: <span data-pzpl-text="times"></span> years</p>
+
+		<div
+			style="padding: 10px; background-color: rgb(49, 49, 49); position: fixed; bottom: 0; left: 0; color: white;">
+			<h3>Your bank account: <span data-pzpl-text="bank"></span>$</h3><br>
+			<i>MoneyReminder&trade;</i>
+		</div>
+	</main>
+	<script src="./script.js" defer></script>
+</body>
+
+</html>
